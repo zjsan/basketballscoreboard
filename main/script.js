@@ -1,33 +1,25 @@
-let scoreHome = document.getElementById('home-score')
-let scoreAway = document.getElementById('away-score')
-let score1 = 0
-let score2 = 0
+let scoreHome = document.getElementById('home-score');
+let scoreAway = document.getElementById('away-score');
+let score1 = 0;
+let score2 = 0;
 
-function increasePoints(team, score){
+function pointsModifier(sign,team){
+    
+    if((score1 >= 0 && score2 >= 0 )) {
 
-    if(team == "home" && score == '1'){
-        score1 += 1
-        scoreHome.textContent = score1 
-    }
-    else if(team == "home" && score == '2'){
-        score1 += 2
-        scoreHome.textContent = score1 
-    }
-    else if(team == "home" && score == "3"){
-        score1 += 3
-        scoreHome.textContent = score1 
-    }
-    else if(team == "away" && score == '1'){
-        score2 += 1
-        scoreAway.textContent = score2 
-    }
-    else if(team == "away" && score == '2'){
-        score2 += 2
-        scoreAway.textContent = score2
-    }
-    else if(team == "away" && score == '3'){
-        score2 += 3
-        scoreAway.textContent = score2
+        if(sign === '-' && team === 'home'){
+            score1--;
+            scoreHome.textContent = score1;
+        }else if(sign === '+' && team === 'home'){
+            score1++;
+            scoreHome.textContent = score1;
+        }else if(sign === '-' && team === 'away'){
+            score2--;
+            scoreAway.textContent = score2;
+        }else if(sign === '+' && team === 'away'){
+            score2++;
+            scoreAway.textContent = score2;
+        }
     }
 }
 

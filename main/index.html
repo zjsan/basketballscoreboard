@@ -16,16 +16,14 @@
         <div class="home-container">
             <h2>HOME</h2>
             <span id="home-score">0</span>
-            <button onclick="increasePoints('home','1')">+1</button>
-            <button onclick="increasePoints('home','2')">+2</button>
-            <button onclick="increasePoints('home','3')">+3</button>
+            <button onclick="pointsModifier('-','home')">-</button>
+            <button onclick="pointsModifier('+','home')">+</button>
         </div>
         <div class="away-container">
             <h2>AWAY</h2>
             <span id="away-score">0</span>
-            <button onclick="increasePoints('away','1')">+1</button>
-            <button onclick="increasePoints('away','2')">+2</button>
-            <button onclick="increasePoints('away','3')">+3</button>
+            <button onclick="pointsModifier('-','away')">-</button>
+            <button onclick="pointsModifier('+','away')">+</button>
         </div>
     </div>
     <script src="script.js"></script>
