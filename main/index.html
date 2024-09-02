@@ -12,20 +12,44 @@
 <body>
 
     <h1>BASKET BALL SCOREBOARD</h1>
-    <div class="container">
-        <div class="home-container">
-            <h2>HOME</h2>
-            <span id="home-score">0</span>
-            <button onclick="pointsModifier('-','home')">-</button>
-            <button onclick="pointsModifier('+','home')">+</button>
+    <div class="main-container">
+        <div class="top-container">
+            <div class="home-container">
+                <h2>HOME</h2>
+                <span id="home-score">0</span>
+                <button onclick="pointsModifier('-','home')">-</button>
+                <button onclick="pointsModifier('+','home')">+</button>
+            </div>
+            <div class="away-container">
+                <h2>AWAY</h2>
+                <span id="away-score">0</span>
+                <button onclick="pointsModifier('-','away')">-</button>
+                <button onclick="pointsModifier('+','away')">+</button>
+            </div>
         </div>
-        <div class="away-container">
-            <h2>AWAY</h2>
-            <span id="away-score">0</span>
-            <button onclick="pointsModifier('-','away')">-</button>
-            <button onclick="pointsModifier('+','away')">+</button>
+    
+        <div class="middle-container">
+            <div class="fouls-container">
+                <h2>Fouls</h2>
+                <span id="fouls-val-home">0</span>
+                <button onclick="foulsModifier('-','home')">-</button>
+                <button onclick="foulsModifier('+','home')">+</button>
+            </div>
+            <div class="period-container">
+                <h2>Period</h2>
+                <span id="period-val">0</span>
+                <button onclick="">-</button>
+                <button onclick="">+</button>
+            </div>
+            <div class="fouls-container">
+                <h2>Fouls</h2>
+                <span id="fouls-val-away">0</span>
+                <button onclick="foulsModifier('-','away')">-</button>
+                <button onclick="foulsModifier('+','away')">+</button>
+            </div>
         </div>
     </div>
+   
     <script src="script.js"></script>
 </body>
 </html>

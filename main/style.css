@@ -18,15 +18,21 @@ button{
 h2{
     color: #ee7b30
 }
-.container{
-    color: white;
-    font-size: 1.5em;
+
+span{
+    color: white;   
+}
+.main-container{
     background-color: #18020c;
     max-width: 40%;
-    height: 220px;
     margin: auto;
+    max-height: 100%;
+    padding-bottom: 2.5em
+}
+.top-container{
+    font-size: 1.5em;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .home-container span{
@@ -38,4 +44,24 @@ h2{
 }
 .away-container span{
     display: block;
+}
+
+.middle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
+}
+
+.middle-container span{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.middle-container h2{
+    margin-bottom: 10px;
+}
+.period-container{
+    margin: 0 4.5em 0 4.5em;
 }

@@ -1,7 +1,11 @@
 let scoreHome = document.getElementById('home-score');
 let scoreAway = document.getElementById('away-score');
+let foulsHome = document.getElementById('fouls-val-home')
+let foulsAway = document.getElementById('fouls-val-away')
 let score1 = 0;
 let score2 = 0;
+let fouls1 = 0;
+let fouls2 = 0;
 
 function pointsModifier(sign,team){
     
@@ -19,6 +23,25 @@ function pointsModifier(sign,team){
         }else if(sign === '+' && team === 'away'){
             score2++;
             scoreAway.textContent = score2;
+        }
+    }
+}
+
+function foulsModifier(sign,team){
+    if((fouls1 >= 0 && fouls2 >= 0 )) {
+
+        if(sign === '-' && team === 'home'){
+            fouls1--;
+            foulsHome.textContent = fouls1;
+        }else if(sign === '+' && team === 'home'){
+            fouls1++;
+            foulsHome.textContent = fouls1;
+        }else if(sign === '-' && team === 'away'){
+            fouls2--;
+            foulsAway.textContent = fouls2;
+        }else if(sign === '+' && team === 'away'){
+            fouls2++;
+            foulsAway.textContent = fouls2;
         }
     }
 }
