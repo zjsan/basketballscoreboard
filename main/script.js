@@ -3,11 +3,31 @@ let scoreAway = document.getElementById('away-score');
 let foulsHome = document.getElementById('fouls-val-home');
 let foulsAway = document.getElementById('fouls-val-away');
 let gamePeriod = document.getElementById('period-val');
+let clockForPeriod = document.getElementById('game-clock');
+let shotClock = document.getElementById('shot-clock');
 let score1 = 0;
 let score2 = 0;
 let fouls1 = 0;
 let fouls2 = 0;
 let period = 0;
+let shotClockTime = 24;
+let gameClockTime = 10
+let clockInterval;
+
+// Start clock when game begins
+function startClock() {
+    clockInterval = setInterval(() => {
+      clockTime -= 1;
+      updateClockDisplay();
+    }, 1000); // update every 1 second
+}
+
+function shotClock(){
+    clockInterval = setInterval(() => {
+        clockTime -= 1;
+        updateClockDisplay();
+    }, 1000); // update every 1 second   
+}
 
 function pointsModifier(sign,team){
     
